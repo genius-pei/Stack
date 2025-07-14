@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include<vector>
 //≤„–Ú±È¿˙
+using namespace std;
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
