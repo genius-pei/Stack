@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<stack>
+#include<queue>
 using namespace std;
 int main()
 {
@@ -14,5 +15,16 @@ int main()
 		st.pop();
 	}
 	cout << endl;
+	queue<int>q;
+
+	q.push(1);
+	q.push(2);
+	q.push(3);
+	q.push(4);
+	while (!q.empty())
+	{
+		cout << q.front()<<" ";
+		q.pop();
+	}
 	return 0;
 }
