@@ -5,7 +5,7 @@
 namespace yiming
 {
 
-	template<class T, class Contanier>
+	template<class T, class Contanier=vector<T>>
 	class stack
 	{
 	public:
@@ -26,6 +26,26 @@ namespace yiming
 			return con.empty();
 		}
 		const T& top() const
+		{
+			return con.back();
+		}
+		T& top()
+		{
+			return con.back();
+		}
+		const T& front()const
+		{
+			return con.front;
+		}
+		T& front()
+		{
+			return con.front;
+		}
+		const T& back()const
+		{
+			return con.back();
+		}
+		T& back()
 		{
 			return con.back();
 		}
