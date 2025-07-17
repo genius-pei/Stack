@@ -9,6 +9,7 @@ int main()
 	st.push(10);
 	st.push(12);
 	st.push(15);
+	st.push(23);
 	st.push(11);
 	cout << st.top() << " " << endl;
 	while (!st.empty())
