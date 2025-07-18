@@ -11,6 +11,7 @@ int main()
 	st.push(15);
 	st.push(23);
 	st.push(11);
+	st.pop();
 	cout << st.top() << " " << endl;
 	while (!st.empty())
 	{
