@@ -5,7 +5,7 @@
 namespace yiming
 {
 
-	template<class T, class Contanier=vector<T>>
+	template<class T, class Contanier=std::vector<T>>
 	class stack
 	{
 	public:
