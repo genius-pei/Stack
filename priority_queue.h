@@ -26,6 +26,17 @@ namespace yiming
    {
    public:
 	   priority_queue() = default;
+	   template <class InputIterator>
+	   priority_queue(InputIterator first, InputIterator last)
+		   :con(first,last)
+	   {
+		   //向下调整建堆
+		   for (int i = (con.size() - 1 - 1) / 2;i >= 0;i--)
+		   {
+			   adjust_down(i);
+		   }
+	   }
+
 
 	   size_t size()const
 		   {
@@ -40,6 +51,18 @@ namespace yiming
 		   swap(con[0], con[con.size() - 1]);
 		   con.pop_back();
 		   adjust_down(0);
+	   }
+	   const T& top()
+	   {
+		   return con[0];
+	   }
+	   bool empty()const
+	   {
+		   return con.empty();
+	   }
+	   size_t size()const
+	   {
+		   return con.size();
 	   }
    private:
 	   void adjust_up(int child)//向上调整
