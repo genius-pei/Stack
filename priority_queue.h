@@ -16,7 +16,7 @@ class Greater
 public:
 	bool operator()(const T& x, const T& y)
 	{
-		ruturn x > y;
+		return x > y;
 	}
 };
 namespace yiming
@@ -38,13 +38,11 @@ namespace yiming
 	   }
 
 
-	   size_t size()const
-		   {
-		   return con.size();
-		   }
+	  
 	   void push(const T& x)
 	   {
 		   con.push_back(x);
+		   adjust_up(con.size() - 1);
 	   }
 	   void pop()
 	   {
@@ -93,7 +91,7 @@ namespace yiming
 			   if (child + 1 < con.size() && com(con[child], con[child + 1]))//选出最大的child
 				   ++child;
 
-			   if (comcon[parent], con[child]))
+			   if (com(con[parent], con[child]))
 			   {
 			   swap(con[parent], con[child]);
 			   parent = child;
