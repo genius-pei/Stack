@@ -2,7 +2,42 @@
 #include<iostream>
 #include<stack>
 #include<queue>
+
 using namespace std;
+#include"priority_queue.h"
+
+int main()
+{
+yiming::priority_queue <int>pq;
+	pq.push(4);
+	pq.push(5);
+	pq.push(2);
+	pq.push(5);
+	pq.push(6);
+	while (!pq.empty())
+	{
+		cout << pq.top() << " ";
+		pq.pop();
+	}
+	cout << endl;
+	return 0;
+}
+//int main()
+//{
+//priority_queue <int>pq;
+//	pq.push(4);
+//	pq.push(5);
+//	pq.push(2);
+//	pq.push(5);
+//	pq.push(6);
+//	while (!pq.empty())
+//	{
+//		cout << pq.top() << " ";
+//		pq.pop();
+//	}
+//	cout << endl;
+//	return 0;
+//}
 //int main()
 //{
 //	stack<int> st;
@@ -28,19 +63,3 @@ using namespace std;
 //	}
 //	return 0;
 //}
-int main()
-{
-	priority_queue<int> pq;
-	pq.push(4);
-	pq.push(5);
-	pq.push(2);
-	pq.push(5);
-	pq.push(6);
-	while (!pq.empty())
-	{
-		cout << pq.top() << " ";
-		pq.pop();
-	}
-	cout << endl;
-	return 0;
-}
