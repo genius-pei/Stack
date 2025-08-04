@@ -2,26 +2,26 @@
 #include<iostream>
 #include<stack>
 #include<queue>
+//using namespace std;
 
-using namespace std;
 #include"priority_queue.h"
 
-int main()
-{
-yiming::priority_queue <int>pq;
-	pq.push(4);
-	pq.push(5);
-	pq.push(2);
-	pq.push(5);
-	pq.push(6);
-	while (!pq.empty())
-	{
-		cout << pq.top() << " ";
-		pq.pop();
-	}
-	cout << endl;
-	return 0;
-}
+//int main()
+//{
+//yiming::priority_queue <int>pq;
+//	pq.push(4);
+//	pq.push(5);
+//	pq.push(2);
+//	pq.push(5);
+//	pq.push(6);
+//	while (!pq.empty())
+//	{
+//		cout << pq.top() << " ";
+//		pq.pop();
+//	}
+//	cout << endl;
+//	return 0;
+//}
 //int main()
 //{
 //priority_queue <int>pq;
@@ -63,3 +63,20 @@ yiming::priority_queue <int>pq;
 //	}
 //	return 0;
 //}
+
+//·Âº¯Êý
+template<class T>
+class less
+{
+public:
+	bool operator()(const T& x,const T& y)
+	{
+		return x < y;
+	}
+};
+int main()
+{
+	less<int> lessfunc;
+	std::cout << lessfunc(1, 2) << std::endl;
+	return 0;
+}
